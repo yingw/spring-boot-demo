@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Users : View</title>
+</head>
+<body>
+	<h1>Users : View</h1>
+	<div>
+		<a href="form.html" th:href="@{/users/new}">Create New User</a>
+		<dl>
+			<dt>ID</dt>
+			<dd th:text="${user.id}">1</dd>
+			<dt>Name</dt>
+			<dd th:text="${user.name}">Yin Guo Wei</dd>
+			<dt>Created</dt>
+			<dd th:text="${user.created}">2017-03-19</dd>
+		</dl>
+	</div>
+</body>
+</html>

@@ -51,5 +51,9 @@ public class User {
 	    this.name = name;
         this.created = LocalDate.now();
     }
+    
+    public boolean isNew() {
+        return this.id == null;
+    }
 
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Users : Create/Update</title>
+</head>
+<body>
+	<h1 th:text="${user['new']} ? 'New User' : 'Edit User'">Users
+		: Create/Update</h1>
+	<!-- 	 th:remove="tag"	 layout:fragment="header" -->
+	<div>
+		<a href="list.html" th:href="@{/users}">List Users</a>
+		<form th:object="${user}" th:method="${user['new']} ? post : put"
+			action="./view.html" th:action="'#'" class="form-horizontal">
+			<dl>
+				<dt>Name</dt>
+				<dd>
+					<input class="form-control" th:field="*{name}" value="Yin Guo Wei" />
+				</dd>
+				<dt>Created</dt>
+				<dd>
+					<input class="form-control" th:field="*{created}"
+						value="2017-03-19" />
+				</dd>
+			</dl>
+
+
+			<button class="btn btn-default" type="submit"
+				th:text="${user['new']} ? 'Add User' : 'Update User'">Add
+				Owner</button>
+		</form>
+	</div>
+</body>
+</html>

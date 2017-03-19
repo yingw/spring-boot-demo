@@ -1,0 +1,62 @@
+dn: dc=wilmar,dc=cn
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: wilmar
+
+dn: ou=groups,dc=wilmar,dc=cn
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: cn=ROLE_USER,ou=groups,dc=wilmar,dc=cn
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: ROLE_USER
+uniqueMember: cn=Some Person,ou=wcs,c=China,dc=wilmar,dc=cn
+uniqueMember: cn=Some Person2,ou=wcs,c=China,dc=wilmar,dc=cn
+uniqueMember: cn=Some Person,ou=wcs,c=China,dc=wilmar,dc=cn
+uniqueMember: cn=Some Person3,ou=wcs,c=China,dc=wilmar,dc=cn
+
+dn: cn=ROLE_ADMIN,ou=groups,dc=wilmar,dc=cn
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: ROLE_ADMIN
+uniqueMember: cn=Some Person2,ou=wcs,c=China,dc=wilmar,dc=cn
+
+dn: c=China,dc=wilmar,dc=cn
+objectclass: top
+objectclass: country
+c: China
+description: The country of China
+
+dn: ou=wcs,c=China,dc=wilmar,dc=cn
+objectclass: top
+objectclass: organizationalUnit
+ou: wcs
+description: First company in China
+
+dn: cn=Gary Yin,ou=wcs,c=China,dc=wilmar,dc=cn
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+uid: gary.yin
+userPassword: password
+cn: Gary Yin
+sn: Gary Yin
+description: China, WCS, Gary Yin
+telephoneNumber: +86 02165432109
+
+dn: cn=So Cheer,ou=wcs,c=China,dc=wilmar,dc=cn
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+uid: so.cheer
+userPassword: password
+cn: So Cheer
+sn: So Cheer
+description: China, WCS, CIO
+telephoneNumber: +553 12345678
+
